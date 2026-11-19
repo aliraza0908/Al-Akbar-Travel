@@ -1,0 +1,346 @@
+/* ==========================================================================
+   Al Akbar Travel & Tours (Pvt) Ltd. — Luxury Motion & Keyframe System
+   Awwwards & Apple-Inspired 60fps Kinetic Design
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.94, 0.94, 1);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes ambientDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(30px, -25px, 0) scale(1.12);
+    opacity: 0.7;
+  }
+}
+
+@keyframes ambientDriftAlt {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(-35px, 20px, 0) scale(1.18);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(2deg);
+  }
+}
+
+@keyframes pulseGlowGreen {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes pulseGlowGold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(197, 160, 89, 0);
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes marqueeSlide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes flightDash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+/* Scroll reveal utility classes */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.stagger-1 { transition-delay: 0.06s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.18s; }
+.stagger-4 { transition-delay: 0.24s; }
+.stagger-5 { transition-delay: 0.30s; }
+.stagger-6 { transition-delay: 0.36s; }
+.stagger-7 { transition-delay: 0.42s; }
+.stagger-8 { transition-delay: 0.48s; }
+
+/* 3D Tilt Wrapper & Specular Sheen Helper */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.18s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.35s ease;
+  position: relative;
+}
+
+.tilt-card .tilt-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.22), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.tilt-card:hover .tilt-glare {
+  opacity: 1;
+}
+
+/* Interactive Hover Utility Classes */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translate3d(0, -8px, 0);
+  box-shadow: 0 24px 48px -12px rgba(7, 21, 41, 0.35);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 32px rgba(197, 160, 89, 0.35);
+}
+
+.hover-scale {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-scale:hover {
+  transform: scale3d(1.03, 1.03, 1);
+}
+
+/* Pulse animation for active operational status */
+.pulse-badge {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulseGlowGreen 2s infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.pulse-badge-gold {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c5a059;
+  animation: pulseGlowGold 2s infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .tilt-card {
+    transform: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   Future-Ready Lenis & Advanced Motion Design
+   ========================================================================== */
+
+/* Lenis Recommended Integration */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Ambient Starlight & Luxury Dust Canvas */
+#ambientLuxuryCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.65;
+  transition: opacity 0.4s ease;
+}
+
+body.light #ambientLuxuryCanvas {
+  opacity: 0.35;
+}
+
+/* Floating Island Dock Transitions */
+.floating-island-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 70%;
+  min-width: 760px;
+  max-width: 1040px;
+  border-radius: var(--radius-pill);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(53, 191, 199, 0.35);
+  box-shadow: 0 14px 40px rgba(23, 54, 75, 0.08), 0 0 22px rgba(53, 191, 199, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: islandDropIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.floating-island-nav.scrolled {
+  top: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(53, 191, 199, 0.5);
+  box-shadow: 0 18px 48px rgba(23, 54, 75, 0.12), 0 0 28px rgba(53, 191, 199, 0.18);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+@keyframes islandDropIn {
+  from {
+    transform: translate3d(-50%, -80px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Magnetic Button Physics */
+.magnetic-btn {
+  display: inline-flex;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Cinematic Mask & Image Reveals */
+.img-reveal-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-reveal-wrapper img {
+  transform: scale(1.15);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.img-reveal-wrapper.in-view img,
+.img-reveal-wrapper:hover img {
+  transform: scale(1);
+}
+
+/* Kinetic Typography Split Stagger */
+.char-span, .word-span {
+  display: inline-block;
+  will-change: transform, opacity;
+}

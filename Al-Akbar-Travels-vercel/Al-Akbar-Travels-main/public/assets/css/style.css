@@ -1,0 +1,2915 @@
+/* ==========================================================================
+   Al Akbar Travel & Tours (Pvt) Ltd. — Sovereign Luxury Design System
+   Award-Winning Awwwards & Apple-Inspired Aesthetics
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('animations.css');
+
+:root {
+  /* ==========================================================================
+     Ocean Breeze + Arctic Aqua Luxury Design System
+     75% Light Base (Pearl White & Soft Sky Blue)
+     15% Deep Contrast (Ocean Blue & Deep Navy)
+     10% Brilliant Accents (Bright Aqua & Champagne)
+     ========================================================================== */
+
+  /* 75% Light Backgrounds */
+  --bg: #F7FAFC; /* Pearl White (Primary Site Canvas) */
+  --bg-deep: #E5F2F8; /* Soft Sky Blue (Alternating Section Canvas) */
+  --bg-soft: #E5F2F8; /* Soft Sky Blue */
+  --bg-surface: #FFFFFF; /* Arctic Pure White (Cards & Surfaces) */
+  --bg-elevated: #FFFFFF;
+  --bg-subtle: #F0F6F9;
+  --card: #FFFFFF;
+
+  /* 15% Deep Contrast & Brand Foundation */
+  --ocean: #126B91; /* Ocean Blue */
+  --ocean-deep: #0D5270;
+  --ocean-light: #2086B1;
+  --ocean-gradient: linear-gradient(135deg, #126B91 0%, #17364B 100%);
+  --ocean-glow: rgba(18, 107, 145, 0.28);
+  --ocean-subtle: rgba(18, 107, 145, 0.08);
+
+  --navy: #17364B; /* Deep Navy */
+  --navy-surface: #102636;
+  --navy-dark: #0D1E2B;
+  --navy-glow: rgba(23, 54, 75, 0.35);
+
+  /* 10% Brilliant Accents */
+  --aqua: #35BFC7; /* Bright Aqua */
+  --aqua-light: #E0F8F9;
+  --aqua-dark: #209DA4;
+  --aqua-gradient: linear-gradient(135deg, #35BFC7 0%, #126B91 100%);
+  --aqua-glow: rgba(53, 191, 199, 0.35);
+  --aqua-subtle: rgba(53, 191, 199, 0.12);
+
+  --champagne: #D5AE68; /* Champagne Accent */
+  --champagne-light: #F8F2E6;
+  --champagne-dark: #B58F47;
+  --champagne-gradient: linear-gradient(135deg, #E6C88D 0%, #D5AE68 50%, #B58F47 100%);
+  --champagne-glow: rgba(213, 174, 104, 0.32);
+  --champagne-subtle: rgba(213, 174, 104, 0.12);
+
+  /* Legacy & Functional Aliases */
+  --gold: #D5AE68;
+  --gold-bright: #B58F47;
+  --gold-dark: #8E6B28;
+  --gold-gradient: linear-gradient(135deg, #D5AE68 0%, #B58F47 100%);
+  --gold-text: linear-gradient(135deg, #17364B 0%, #126B91 50%, #35BFC7 100%);
+  --gold-glow: rgba(213, 174, 104, 0.28);
+  --gold-subtle: rgba(213, 174, 104, 0.1);
+
+  --burgundy: #17364B;
+  --burgundy-dark: #0D1E2B;
+  --burgundy-deep: #08131C;
+  --burgundy-light: #126B91;
+  --burgundy-gradient: linear-gradient(135deg, #126B91 0%, #17364B 100%);
+  --burgundy-glow: rgba(18, 107, 145, 0.25);
+  --burgundy-subtle: rgba(18, 107, 145, 0.08);
+
+  --blue: #126B91;
+  --blue-light: #35BFC7;
+  --blue-glow: rgba(18, 107, 145, 0.25);
+  --cyan-accent: #35BFC7;
+
+  /* Official WhatsApp Green */
+  --wa-green: #25d366;
+  --wa-dark: #128c7e;
+  --green: #10b981;
+  --green-glow: rgba(16, 185, 129, 0.2);
+
+  /* High-Contrast Editorial Typography Tokens */
+  --ink: #17364B; /* Deep Navy text on light backgrounds */
+  --ink-secondary: #3B586C; /* Refined Ocean Slate */
+  --muted: #627C8F; /* Ice Slate */
+  --ink-inverted: #FFFFFF;
+
+  /* Crisp Borders */
+  --border: rgba(23, 54, 75, 0.1);
+  --border-light: rgba(23, 54, 75, 0.05);
+  --border-aqua: rgba(53, 191, 199, 0.35);
+  --border-champagne: rgba(213, 174, 104, 0.38);
+  --border-gold: rgba(213, 174, 104, 0.38);
+
+  /* Arctic Aqua Frosted Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-card: #FFFFFF;
+  --glass-border: rgba(53, 191, 199, 0.24);
+  --glass-blur: blur(24px) saturate(180%);
+
+  /* Soft Arctic Shadows (No harsh dark shadows) */
+  --shadow-sm: 0 4px 14px rgba(23, 54, 75, 0.05);
+  --shadow-md: 0 10px 30px rgba(23, 54, 75, 0.07);
+  --shadow-lg: 0 20px 48px -10px rgba(23, 54, 75, 0.12);
+  --shadow-aqua: 0 12px 32px rgba(53, 191, 199, 0.22);
+  --shadow-champagne: 0 10px 28px rgba(213, 174, 104, 0.2);
+  --shadow-gold: 0 10px 28px rgba(213, 174, 104, 0.2);
+  --shadow-burgundy: 0 12px 32px rgba(18, 107, 145, 0.18);
+  --shadow-inner-glow: inset 0 1px 1px rgba(255, 255, 255, 0.95);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 34px;
+  --radius-pill: 9999px;
+
+  /* Typography */
+  --font-display: 'Cinzel', 'Outfit', Georgia, serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+}
+
+/* Magnetic Luxury Cursor */
+#luxuryCursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+#luxuryCursorHalo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--gold);
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 75%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, background-color 0.3s;
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+}
+
+body.cursor-hover #luxuryCursorDot {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+}
+
+body.cursor-hover #luxuryCursorHalo {
+  width: 60px;
+  height: 60px;
+  border-color: var(--gold-bright);
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.25) 0%, transparent 70%);
+}
+
+@media (pointer: coarse) {
+  #luxuryCursorDot, #luxuryCursorHalo { display: none !important; }
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.gold-gradient-text {
+  background: var(--gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-accent {
+  color: var(--gold);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: var(--burgundy-gradient);
+  color: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 24px rgba(27, 66, 116, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7e174b 0%, #520f2e 50%, #2f041a 100%);
+  border-color: var(--gold-bright);
+  box-shadow: 0 14px 34px rgba(27, 66, 116, 0.6), 0 0 20px rgba(212, 175, 55, 0.28);
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.5);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+  transform: translateY(-2px);
+}
+
+.btn-gold-outline {
+  background: rgba(197, 160, 89, 0.08);
+  color: var(--gold-bright);
+  border: 1px solid var(--gold);
+}
+
+.btn-gold-outline:hover {
+  background: var(--gold);
+  color: #071529;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.4);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.84rem;
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 1.05rem;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Glass Cards */
+.glass-panel {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-inner-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Executive Topbar */
+.topbar {
+  background: rgba(2, 5, 11, 0.95);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+  padding: 8px 0;
+  color: var(--muted);
+  position: relative;
+  z-index: 101;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  color: var(--gold-bright);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.time-hud {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+}
+
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--gold);
+}
+
+/* Main Site Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(23, 54, 75, 0.08);
+  box-shadow: 0 4px 20px rgba(23, 54, 75, 0.05);
+  transition: all 0.3s ease;
+}
+
+
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(197, 160, 89, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.brand-text span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  color: var(--ink-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-bright);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 60%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+/* ==========================================================================
+   Hero Section — Ocean Breeze + Arctic Aqua Luxury
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 0 90px;
+  overflow: hidden;
+  background-color: #F7FAFC;
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.28) 0%, rgba(247, 250, 252, 0.76) 42%, rgba(247, 250, 252, 0.96) 82%, #F7FAFC 100%),
+    url('../images/ocean_hero_destination.jpg');
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+}
+
+.hero-backdrop-glow {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(53, 191, 199, 0.25) 0%, rgba(18, 107, 145, 0.12) 45%, transparent 75%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(53, 191, 199, 0.38);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ocean);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(18, 107, 145, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: #17364B;
+  margin-bottom: 22px;
+}
+
+.hero .ocean-gradient-text,
+.hero-word-accent {
+  background: linear-gradient(135deg, #126B91 0%, #35BFC7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero p.hero-subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: #3B586C;
+  max-width: 780px;
+  margin: 0 auto 34px;
+  line-height: 1.68;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.hero-trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .hero-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.trust-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(53, 191, 199, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(23, 54, 75, 0.05);
+  transition: all 0.25s ease;
+}
+.trust-card-icon {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+.trust-card-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #17364B !important;
+}
+
+.trust-card-lbl {
+  font-size: 0.8rem;
+  color: #3B586C !important;
+}
+
+/* ==========================================================================
+   Hero Search Console (Floating Glass Hub)
+   ========================================================================== */
+.search-console-wrapper {
+  margin-top: -70px;
+  position: relative;
+  z-index: 30;
+}
+
+.search-console-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 24px 32px 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), var(--shadow-inner-glow);
+}
+
+.search-tabs-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  position: relative;
+}
+
+.search-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.96rem;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.search-tab-btn:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.search-tab-btn.active {
+  color: #071529;
+  background: var(--gold-gradient);
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.35);
+}
+
+.search-grid-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.input-box label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+}
+
+.input-field-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field-wrap span.icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.input-field-wrap select, .input-field-wrap input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  background: rgba(2, 5, 11, 0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field-wrap select:focus, .input-field-wrap input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+}
+
+.input-field-wrap select option {
+  background: #081020;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Section Layouts & Headers
+   ========================================================================== */
+section.py-luxury {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Category Filter Tabs (Flights, Tours, etc.) */
+.category-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--ink-secondary);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+.filter-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.filter-chip.active {
+  background: var(--gold-gradient);
+  color: #071529;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.35);
+}
+
+/* ==========================================================================
+   Flight Deal Cards
+   ========================================================================== */
+.flights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.flight-ticket-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-ticket-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(197, 160, 89, 0.15);
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.airline-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.fare-tag {
+  background: rgba(197, 160, 89, 0.12);
+  color: var(--gold-bright);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 0.8rem;
+}
+
+.flight-route-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.city-code {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.city-name {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.route-mid-visual {
+  flex: 1;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.route-flight-type {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.route-path-svg {
+  width: 100%;
+  height: 24px;
+}
+
+.route-stops-tag {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.ticket-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.ticket-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.price-amount {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--gold-bright);
+}
+
+/* ==========================================================================
+   Destination & Tour Cards (3D Tilt)
+   ========================================================================== */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.destination-card {
+  height: 420px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.destination-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.destination-card:hover .destination-card-bg {
+  transform: scale(1.08);
+}
+
+.destination-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 9, 14, 0.1) 0%, rgba(7, 9, 14, 0.88) 70%, #07090e 100%);
+  z-index: 2;
+}
+
+.destination-card-content {
+  position: relative;
+  z-index: 3;
+}
+
+.destination-badge {
+  display: inline-block;
+  background: rgba(197, 160, 89, 0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.destination-card h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.destination-card p {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  margin-bottom: 16px;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   The Sovereign Umrah 2026 Collection
+   ========================================================================== */
+.umrah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+}
+
+.umrah-luxury-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.umrah-luxury-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(197, 160, 89, 0.2);
+}
+
+.umrah-card-media {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.umrah-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.umrah-luxury-card:hover .umrah-card-media img {
+  transform: scale(1.08);
+}
+
+.umrah-floating-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(4, 8, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.umrah-airline-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #071529;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+}
+
+.umrah-card-body {
+  padding: 24px;
+}
+
+.umrah-card-body h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.hotel-spec-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.hotel-spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotel-dist {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.inclusions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.inc-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  color: var(--ink-secondary);
+}
+
+/* ==========================================================================
+   The Al Akbar Standard — Interactive Bento Grid
+   ========================================================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.bento-col-8 { grid-column: span 8; }
+.bento-col-4 { grid-column: span 4; }
+.bento-col-6 { grid-column: span 6; }
+.bento-col-12 { grid-column: span 12; }
+
+.bento-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bento-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bento-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.bento-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.bento-card p {
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Flagship Sahiwal Lounge & Head Office Section
+   ========================================================================== */
+.lounge-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.lounge-details-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 44px;
+}
+
+.status-pill-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+}
+
+.map-container {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  height: 480px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+/* ==========================================================================
+   Partner Airline Infinite Marquee
+   ========================================================================== */
+.partner-marquee-section {
+  padding: 40px 0;
+  background: rgba(2, 5, 11, 0.85);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.partner-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide 30s linear infinite;
+}
+
+.partner-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.partner-airline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  margin: 0 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Luxury Footer
+   ========================================================================== */
+.site-footer {
+  background: #02050b;
+  border-top: 1px solid var(--border);
+  padding: 80px 0 30px;
+  color: var(--muted);
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-heading);
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a:hover {
+  color: var(--gold-bright);
+  transform: translateX(4px);
+}
+
+.social-links-bar {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-circle:hover {
+  background: var(--gold-gradient);
+  color: #071529;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(197, 160, 89, 0.4);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   Luxury Floating WhatsApp Beacon (Pure Circle, Official Vector SVG, No Text)
+   ========================================================================== */
+.floating-wa-beacon {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2fe674 0%, #25d366 50%, #1ea952 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45), 0 0 20px rgba(37, 211, 102, 0.25);
+  z-index: 9999;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: pulseGlowGreen 3.5s infinite;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+}
+
+.floating-wa-beacon:hover {
+  transform: translateY(-5px) scale(1.12);
+  box-shadow: 0 18px 42px rgba(37, 211, 102, 0.65), 0 0 30px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #38f080 0%, #29e06e 50%, #1ea952 100%);
+}
+
+.floating-wa-beacon svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.floating-wa-beacon:hover svg {
+  transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .floating-wa-beacon {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-wa-beacon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 5, 11, 0.85);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  max-width: 520px;
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: var(--gold);
+  color: #071529;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(2, 5, 11, 0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .search-grid-inputs { grid-template-columns: 1fr 1fr; }
+  .lounge-wrapper { grid-template-columns: 1fr; }
+  .bento-col-8, .bento-col-4, .bento-col-6 { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  .topbar-inner { justify-content: center; text-align: center; }
+  .nav-toggle { display: block; }
+  .main-nav {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: #040812;
+    padding: 24px;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .main-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .search-grid-inputs { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .flights-grid, .destinations-grid, .umrah-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ==========================================================================
+   Luxury Subhero & Inner Page Headers — Ocean Breeze & Arctic Aqua
+   ========================================================================== */
+.subhero {
+  position: relative;
+  padding: 140px 0 60px;
+  background: radial-gradient(circle at 50% 0%, #E5F2F8 0%, #EEF6FA 50%, #F7FAFC 100%);
+  text-align: center;
+  border-bottom: 1px solid rgba(23, 54, 75, 0.08);
+  overflow: hidden;
+}
+
+.subhero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #17364B;
+}
+
+.subhero p {
+  color: #3B586C;
+  font-size: 1.1rem;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Info Cards (Glassmorphism Announcement Panels) */
+.info-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin: 40px auto;
+  box-shadow: var(--shadow-lg), var(--shadow-inner-glow);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+/* Grids System */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+/* Standard Cards */
+.card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
+}
+
+.service-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+/* Tabs System */
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--ink-secondary);
+  padding: 9px 22px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.tab.active {
+  background: var(--gold-gradient);
+  color: #071529;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.35);
+}
+
+/* ==========================================================================
+   Visa Cards
+   ========================================================================== */
+.visa-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.visa-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(197, 160, 89, 0.15);
+}
+
+.visa-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.flag-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flag-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visa-head h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.visa-meta-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  margin-bottom: 10px;
+}
+
+.visa-meta-pill strong {
+  color: var(--gold-bright);
+}
+
+.check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+.check-list li {
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.check-list li::before {
+  content: '✓';
+  color: #34d399;
+  font-weight: 800;
+}
+
+.visa-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+
+/* ==========================================================================
+   Holiday Tour Cards
+   ========================================================================== */
+.tour-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+.tour-media {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tour-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tour-card:hover .tour-media img {
+  transform: scale(1.08);
+}
+
+.tour-duration-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(4, 8, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.tour-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.tm-types {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+
+.tm-type {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 0.78rem;
+  color: var(--ink-secondary);
+}
+
+.tm-city {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.84rem;
+}
+
+.tm-city th {
+  text-align: left;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gold-bright);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.tm-city td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-secondary);
+}
+
+.tm-from {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.tour-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  margin: 40px 0 80px;
+}
+
+.contact-card {
+  background: var(--glass-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-card h3 {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tag-gold {
+  background: rgba(197, 160, 89, 0.15);
+  border: 1px solid var(--gold);
+  color: var(--gold-bright);
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+
+/* ==========================================================================
+   Minimalist Header & Slide-Over Luxury Drawer (Qatar Airways Style)
+   ========================================================================== */
+.main-nav-minimal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav-minimal .nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.main-nav-minimal .nav-link:hover, .main-nav-minimal .nav-link.active {
+  color: var(--gold-bright);
+}
+
+.main-nav-minimal .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.main-nav-minimal .nav-link:hover::after, .main-nav-minimal .nav-link.active::after {
+  width: 80%;
+}
+
+.drawer-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-heading);
+}
+
+.drawer-trigger-btn:hover {
+  background: rgba(197, 160, 89, 0.15);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+  transform: translateY(-2px);
+}
+
+.drawer-bars {
+  font-size: 1.15rem;
+  color: var(--gold);
+}
+
+.drawer-lbl {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Slide-Over Drawer Container */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 5, 11, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-pane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 440px;
+  max-width: 90vw;
+  height: 100vh;
+  background: rgba(6, 12, 24, 0.94);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-overlay.active .drawer-pane {
+  transform: translate3d(0, 0, 0);
+}
+
+.drawer-head {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-close-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+
+.drawer-close-btn:hover {
+  background: var(--gold);
+  color: #071529;
+}
+
+.drawer-body {
+  padding: 28px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.drawer-section-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.drawer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawer-links-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--ink-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.drawer-links-list a:hover, .drawer-links-list a.active {
+  background: rgba(197, 160, 89, 0.12);
+  color: var(--gold-bright);
+  transform: translateX(6px);
+}
+
+/* ==========================================================================
+   Qatar Airways Airport Swap & Trip Selector
+   ========================================================================== */
+.booking-config-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.trip-type-radios {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.trip-type-opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+}
+
+.trip-type-opt input[type="radio"] {
+  accent-color: var(--gold);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.class-selector-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.class-selector-pill select {
+  background: rgba(2, 5, 11, 0.5);
+  border: 1px solid var(--border);
+  color: var(--gold-bright);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  outline: none;
+}
+
+.airport-swap-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.airport-swap-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--gold);
+  color: var(--gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  font-size: 1.15rem;
+  margin-top: 22px;
+}
+
+.airport-swap-btn:hover {
+  transform: rotate(180deg) scale(1.08);
+  background: var(--gold);
+  color: #071529;
+}
+
+.airport-swap-btn:active {
+  transform: rotate(360deg) scale(0.95);
+}
+
+@media (max-width: 992px) {
+  .main-nav-minimal { display: none; }
+  .airport-swap-btn { margin-top: 0; align-self: center; }
+}
+
+
+/* ==========================================================================
+   VIP Executive Accreditation & Concierge Banner (Shifted from topbar)
+   ========================================================================== */
+.footer-executive-strip {
+  background: linear-gradient(135deg, rgba(27, 66, 116, 0.45) 0%, rgba(14, 17, 26, 0.88) 60%, rgba(26, 2, 13, 0.5) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.executive-strip-col {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.executive-strip-icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.35));
+  flex-shrink: 0;
+}
+
+.executive-strip-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.executive-strip-desc {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.executive-strip-link {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.executive-strip-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SOVEREIGN LIGHT MODE HIGH-CONTRAST LUXURY ENGINE
+   Ensures 100% crystal-clear visibility, rich contrast & regal aesthetic
+   ========================================================================== */
+
+/* Headings & Text */
+
+
+
+
+@media (max-width: 768px) {
+  .floating-island-nav {
+    top: 10px;
+    width: calc(100% - 20px);
+    border-radius: var(--radius-lg);
+  }
+  .hero {
+    padding: 110px 0 100px;
+  }
+  .subhero {
+    padding: 110px 0 40px;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   Ocean Breeze + Arctic Aqua Luxury — Island Dock & Card Separation System
+   ========================================================================== */
+.floating-island-nav {
+  position: fixed !important;
+  top: 16px !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate3d(-50%, 0, 0) !important;
+  margin: 0 !important;
+  width: min(1140px, calc(100% - 48px)) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(23, 54, 75, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(23, 54, 75, 0.08), 0 0 1px rgba(23, 54, 75, 0.08) !important;
+  border-radius: 14px !important;
+  padding: 0 !important;
+  z-index: 1000 !important;
+  box-sizing: border-box !important;
+}
+
+.floating-island-nav.scrolled {
+  top: 10px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translate3d(-50%, 0, 0) !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(53, 191, 199, 0.4) !important;
+  box-shadow: 0 14px 38px rgba(23, 54, 75, 0.12), 0 0 16px rgba(53, 191, 199, 0.1) !important;
+  border-radius: 14px !important;
+}
+
+.floating-island-nav .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 26px;
+  width: 100%;
+}
+
+.floating-island-nav .brand {
+  gap: 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.floating-island-nav .brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+.floating-island-nav .brand-text strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+.floating-island-nav .brand-text span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ocean);
+  text-transform: uppercase;
+}
+
+.floating-island-nav .main-nav-minimal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.floating-island-nav .nav-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 7px 15px;
+  border-radius: var(--radius-pill);
+  color: var(--navy);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.floating-island-nav .nav-link:hover,
+.floating-island-nav .nav-link.active {
+  color: var(--ocean);
+  background: var(--bg-soft);
+  border-color: rgba(53, 191, 199, 0.35);
+  box-shadow: 0 2px 8px rgba(53, 191, 199, 0.15);
+}
+
+.floating-island-nav .drawer-trigger-btn {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  background: var(--bg-soft);
+  border: 1px solid rgba(53, 191, 199, 0.38);
+  color: var(--ocean);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.floating-island-nav .drawer-trigger-btn:hover {
+  background: var(--ocean);
+  border-color: var(--ocean);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(18, 107, 145, 0.25);
+}
+
+@media (max-width: 900px) {
+  .floating-island-nav {
+    width: calc(100% - 24px) !important;
+    min-width: auto !important;
+    max-width: none !important;
+    top: 10px !important;
+    border-radius: var(--radius-lg) !important;
+  }
+}
+
+/* ==========================================================================
+   ARCTIC WHITE CARDS WITH CRISP AQUA BORDERS & GENEROUS SEPARATION
+   ========================================================================== */
+.flights-grid {
+  gap: 36px !important;
+}
+
+.umrah-grid {
+  gap: 36px !important;
+}
+
+.visas-grid {
+  gap: 36px !important;
+}
+
+.tours-grid {
+  gap: 36px !important;
+}
+
+.bento-grid {
+  gap: 32px !important;
+}
+
+.testimonials-grid {
+  gap: 36px !important;
+}
+
+.lounge-wrapper {
+  gap: 40px !important;
+}
+
+/* Arctic Pure White Cards */
+.flight-ticket-card,
+.umrah-luxury-card,
+.visa-card,
+.tour-card,
+.testimonial-card,
+.bento-card,
+.card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(53, 191, 199, 0.24) !important;
+  box-shadow: 0 10px 32px rgba(23, 54, 75, 0.06), 0 1px 3px rgba(23, 54, 75, 0.04) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--ink) !important;
+}
+
+/* Subtle, refined hover with soft aqua radiance */
+.flight-ticket-card:hover,
+.umrah-luxury-card:hover,
+.visa-card:hover,
+.tour-card:hover,
+.testimonial-card:hover,
+.bento-card:hover,
+.card:hover {
+  border-color: rgba(53, 191, 199, 0.55) !important;
+  box-shadow: 0 18px 45px rgba(23, 54, 75, 0.1), 0 0 25px rgba(53, 191, 199, 0.18) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Search Console Card */
+.search-console-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(53, 191, 199, 0.28) !important;
+  box-shadow: 0 16px 48px rgba(23, 54, 75, 0.08) !important;
+}
+
+.search-tab-btn {
+  color: var(--ink) !important;
+}
+
+.search-tab-btn.active {
+  background: var(--ocean-gradient) !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 16px rgba(18, 107, 145, 0.28) !important;
+}
+
+.booking-config-bar {
+  border-color: rgba(23, 54, 75, 0.08) !important;
+}
+
+.trip-type-opt {
+  color: var(--ink) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--ocean-gradient) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(18, 107, 145, 0.28) !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #167CA7 0%, #17364B 100%) !important;
+  box-shadow: 0 12px 30px rgba(18, 107, 145, 0.38) !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1.5px solid rgba(23, 54, 75, 0.25) !important;
+  color: var(--navy) !important;
+  background: transparent !important;
+}
+
+.btn-outline:hover {
+  background: var(--bg-soft) !important;
+  border-color: var(--ocean) !important;
+  color: var(--ocean) !important;
+  transform: translateY(-2px);
+}
+
+.btn-gold,
+.btn-gold-outline {
+  background: var(--champagne-gradient) !important;
+  color: var(--navy) !important;
+  border: none !important;
+  font-weight: 700 !important;
+}
+
+/* Badges & Accents */
+.hero-pill-badge {
+  background: var(--bg-soft) !important;
+  border: 1px solid rgba(53, 191, 199, 0.4) !important;
+  color: var(--ocean) !important;
+  box-shadow: 0 4px 16px rgba(53, 191, 199, 0.12) !important;
+}
+
+.pulse-badge-gold {
+  background: var(--aqua) !important;
+}
+
+.fare-tag {
+  background: var(--aqua-light) !important;
+  color: var(--ocean-deep) !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(53, 191, 199, 0.3) !important;
+}
+
+.price-amount {
+  color: var(--ocean) !important;
+}
+
+/* Partner Marquee */
+.partner-marquee-section {
+  background: var(--bg-soft) !important;
+  border-top: 1px solid rgba(23, 54, 75, 0.08) !important;
+  border-bottom: 1px solid rgba(23, 54, 75, 0.08) !important;
+}
+
+.partner-airline-pill {
+  background: #FFFFFF !important;
+  color: var(--navy) !important;
+  border: 1px solid rgba(23, 54, 75, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(23, 54, 75, 0.04) !important;
+}
+
+/* Site Footer: Selective 15% Deep Navy Contrast Section */
+.site-footer {
+  background: linear-gradient(180deg, #17364B 0%, #0F2432 100%) !important;
+  color: #FFFFFF !important;
+  border-top: 2px solid var(--aqua) !important;
+}
+
+.site-footer h4,
+.site-footer .footer-title,
+.site-footer strong {
+  color: #FFFFFF !important;
+}
+
+.site-footer p,
+.site-footer a,
+.site-footer .footer-links a {
+  color: #B2CAD6 !important;
+}
+
+.site-footer a:hover,
+.site-footer .footer-links a:hover {
+  color: var(--aqua) !important;
+}
+
+.footer-executive-strip {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(53, 191, 199, 0.25) !important;
+}
+
+.executive-strip-title {
+  color: #FFFFFF !important;
+}
+
+.executive-strip-desc {
+  color: #B2CAD6 !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #8CAAB9 !important;
+}
+
+
+/* ==========================================================================
+   Page Inner Heroes — Unified Ocean Breeze + Arctic Aqua Luxury
+   ========================================================================== */
+.hero-inner {
+  position: relative;
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 155px 0 75px;
+  overflow: hidden;
+  background-color: #F7FAFC;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.hero-inner .hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero-inner h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.18;
+  color: #17364B;
+  margin-bottom: 18px;
+}
+
+.hero-inner p.hero-subtitle {
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+  color: #3B586C;
+  max-width: 760px;
+  margin: 0 auto 28px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* Page Specific Hero Backgrounds with Soft Gradient Overlays */
+.hero-flights {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/flights_hero_destination.jpg');
+}
+
+.hero-umrah {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/umrah_hero_makkah.jpg');
+}
+
+.hero-hotels {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/hotels_hero_luxury.jpg');
+}
+
+.hero-visas {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/visas_hero_landmarks.jpg');
+}
+
+.hero-tours {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/tours_hero_mountains.jpg');
+}
+
+.hero-about {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/about_hero_heritage.jpg');
+}
+
+.hero-contact {
+  background-image:
+    linear-gradient(180deg, rgba(247, 250, 252, 0.22) 0%, rgba(247, 250, 252, 0.78) 45%, rgba(247, 250, 252, 0.96) 85%, #F7FAFC 100%),
+    url('../images/contact_hero_lounge.jpg');
+}
+
+/* ==========================================================================
+   Selective Deep Navy CTA Band (Visual Rhythm Contrast)
+   ========================================================================== */
+.cta-band {
+  background: linear-gradient(145deg, #17364B 0%, #126B91 100%);
+  color: #FFFFFF;
+  padding: 70px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.cta-band::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(53, 191, 199, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-band h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.cta-band p {
+  color: rgba(229, 242, 248, 0.92);
+  max-width: 680px;
+  margin: 0 auto 30px;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.cta-band-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ==========================================================================
+   Realistic Luxury Icon System (Replacing Cartoon Unicode Emojis)
+   ========================================================================== */
+.lux-icon {
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(18, 107, 145, 0.12));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.trust-card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(229, 242, 248, 0.9) 0%, rgba(255, 255, 255, 0.98) 100%);
+  border: 1.5px solid rgba(53, 191, 199, 0.32);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(18, 107, 145, 0.08);
+  transition: all 0.3s ease;
+}
+
+.trust-card:hover .trust-card-icon {
+  transform: translateY(-2px) scale(1.06);
+  border-color: var(--gold);
+  box-shadow: 0 6px 18px rgba(213, 174, 104, 0.28);
+}
+
+.trust-card-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Bento Grid Realistic Luxury Emblems */
+.bento-icon {
+  width: 66px;
+  height: 66px;
+  background: linear-gradient(145deg, #FFFFFF 0%, #E5F2F8 100%);
+  border: 1.5px solid rgba(53, 191, 199, 0.35);
+  border-radius: 20px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 26px rgba(23, 54, 75, 0.08), inset 0 1px 1px #fff;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover .bento-icon {
+  transform: translateY(-4px) scale(1.08);
+  border-color: var(--gold);
+  box-shadow: 0 16px 32px rgba(213, 174, 104, 0.35);
+}
+
+.bento-icon svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+/* Service icon box (About page values) */
+.service-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #E5F2F8 0%, #FFFFFF 100%);
+  border: 1.5px solid rgba(53, 191, 199, 0.3);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 16px rgba(18, 107, 145, 0.08);
+}
+
+.service-icon-box svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* Button & Tab Realistic Icons */
+.btn .lux-icon {
+  margin-right: 8px;
+  margin-top: -2px;
+}
+
+.search-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-tab-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
