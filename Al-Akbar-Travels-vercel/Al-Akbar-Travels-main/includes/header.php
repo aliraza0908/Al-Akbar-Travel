@@ -53,7 +53,7 @@ $canonicalUrl = $siteUrl . '/' . $reqPath;
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/animations.css?v=28">
-<link rel="stylesheet" href="assets/css/style.css?v=28">
+<link rel="stylesheet" href="assets/css/style.css?v=29">
 <?php if (isset($extraCss)) { echo $extraCss; } ?>
 
 <!-- Schema.org JSON-LD Structured Data for Search Engines -->

@@ -2674,6 +2674,262 @@ section.py-luxury {
   color: #8CAAB9 !important;
 }
 
+/* ==========================================================================
+   Final Mobile Layout Guardrails
+   ========================================================================== */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .floating-island-nav {
+    width: calc(100% - 20px) !important;
+    top: 8px !important;
+  }
+
+  .floating-island-nav .header-inner {
+    padding: 10px 12px;
+  }
+
+  .floating-island-nav .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .floating-island-nav .brand-logo {
+    height: 34px;
+  }
+
+  .floating-island-nav .brand-text {
+    min-width: 0;
+  }
+
+  .floating-island-nav .brand-text strong {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .floating-island-nav .brand-text span {
+    display: none;
+  }
+
+  .floating-island-nav .drawer-trigger-btn {
+    padding: 7px 11px;
+    gap: 4px;
+  }
+
+  .floating-island-nav .drawer-lbl {
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 116px 0 116px;
+    background-position: center top;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-pill-badge {
+    max-width: 100%;
+    padding: 7px 12px;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .hero p.hero-subtitle {
+    font-size: 0.96rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .trust-card {
+    padding: 13px 14px;
+  }
+
+  .trust-card-val {
+    font-size: 1.05rem;
+  }
+
+  .search-console-wrapper {
+    margin-top: -72px;
+  }
+
+  .search-console-card {
+    padding: 16px 14px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .search-tabs-nav {
+    gap: 4px;
+    margin: 0 -2px 18px;
+    padding-bottom: 10px;
+  }
+
+  .search-tab-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .booking-config-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .class-selector-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .class-selector-pill select {
+    max-width: 62%;
+  }
+
+  .search-grid-inputs {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .search-grid-inputs > div {
+    min-width: 0;
+  }
+
+  .airport-swap-btn {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .search-grid-inputs #searchSubmitBtn {
+    width: 100%;
+    margin-top: 4px !important;
+  }
+
+  section.py-luxury {
+    padding: 64px 0;
+  }
+
+  .section-head {
+    margin-bottom: 34px;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+
+  .section-desc {
+    font-size: 0.94rem;
+  }
+
+  .flights-grid,
+  .destinations-grid,
+  .umrah-grid,
+  .visas-grid,
+  .tours-grid,
+  .bento-grid,
+  .testimonials-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .flight-ticket-card,
+  .umrah-luxury-card,
+  .visa-card,
+  .tour-card,
+  .testimonial-card,
+  .bento-card,
+  .card {
+    min-width: 0;
+  }
+
+  .lounge-details-card {
+    padding: 26px 20px;
+  }
+
+  .map-container {
+    height: 320px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+    margin-bottom: 38px;
+  }
+
+  .site-footer {
+    padding: 56px 0 24px;
+  }
+
+  .drawer-pane {
+    width: min(440px, 100vw);
+    max-width: 100vw;
+  }
+
+  .drawer-head,
+  .drawer-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .floating-island-nav .brand-text strong {
+    font-size: 0.86rem;
+  }
+
+  .floating-island-nav .drawer-lbl {
+    display: none;
+  }
+
+  .floating-island-nav .drawer-trigger-btn {
+    padding: 7px 10px;
+  }
+
+  .hero {
+    padding-top: 108px;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .search-tab-btn {
+    padding: 7px 9px;
+    font-size: 0.74rem;
+  }
+
+  .trip-type-radios {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
 
 /* ==========================================================================
    Page Inner Heroes — Unified Ocean Breeze + Arctic Aqua Luxury
